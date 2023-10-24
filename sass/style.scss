@@ -1,0 +1,127 @@
+@forward "globals";
+
+
+main{
+    height: 100vh;
+    background: url(./../images/pattern-background-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    @media (min-width:500px) {
+        background: url(./../images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top -20vw;
+        background-color: var(--Pale-blue);
+    }
+}
+
+.container{
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 1rem 3rem rgba($color: #000000, $alpha: 0.2) ;
+    overflow: hidden;
+    max-width: 400px;
+}
+
+
+.card{
+    &__pic{
+        width: 100%;
+        img{
+            width: 100%;
+
+        }
+    }
+    &__texts{
+        text-align: center;
+        padding: 30px;
+    }
+    &__price{
+        background-color: #f5f7ff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        border-radius: 10px;
+        @media (min-width:500px) {
+            padding: 1.5em 15px;
+        }
+        & > p {
+            text-decoration: underline;
+            color: var(--Bright-blue);
+            cursor: pointer;
+            &:hover{
+                text-decoration: none;
+                color:hsl(250, 69%, 60%);
+            }
+        }
+    }
+
+    &__btn{
+        border: none;
+        outline: none;
+        background-color: var(--Bright-blue);
+        color: white;
+        padding: 1rem 0 ;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0px 10px 10px  rgba($color: #000000, $alpha: 0.2);
+        &:hover{
+            background-color:hsl(250, 69%, 60%);
+        }
+    }
+    &__cancel{
+        color: var(--Desaturated-blue);
+        h5{
+            font-size: 15px;
+            cursor: pointer;
+            &:hover{
+                color: var(--Dark-blue);
+            }
+        }
+    }
+}
+
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    &__titel{
+
+    }
+    &__par{
+        color: var(--Desaturated-blue);
+    }
+    
+}
+
+.card__price--info{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    
+    & .details{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        h2{font-size: 14px;}
+        & h3{color: var(--Desaturated-blue);font-size: 14px;}
+    }
+}
+
+
+.attribution{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    a,a:visited,a:active{color: var(--Bright-blue);}
+}

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+html {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: all 0.5s;
+}
+
+p {
+  font-size: 16px;
+}
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+main {
+  height: 100vh;
+  background: url(./../images/pattern-background-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--Pale-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+@media (min-width: 500px) {
+  main {
+    background: url(./../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top -20vw;
+    background-color: var(--Pale-blue);
+  }
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 1rem 3rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.card__pic {
+  width: 100%;
+}
+.card__pic img {
+  width: 100%;
+}
+.card__texts {
+  text-align: center;
+  padding: 30px;
+}
+.card__price {
+  background-color: #f5f7ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+}
+@media (min-width: 500px) {
+  .card__price {
+    padding: 1.5em 15px;
+  }
+}
+.card__price > p {
+  text-decoration: underline;
+  color: var(--Bright-blue);
+  cursor: pointer;
+}
+.card__price > p:hover {
+  text-decoration: none;
+  color: hsl(250, 69%, 60%);
+}
+.card__btn {
+  border: none;
+  outline: none;
+  background-color: var(--Bright-blue);
+  color: white;
+  padding: 1rem 0;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.card__btn:hover {
+  background-color: hsl(250, 69%, 60%);
+}
+.card__cancel {
+  color: var(--Desaturated-blue);
+}
+.card__cancel h5 {
+  font-size: 15px;
+  cursor: pointer;
+}
+.card__cancel h5:hover {
+  color: var(--Dark-blue);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.text__par {
+  color: var(--Desaturated-blue);
+}
+
+.card__price--info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card__price--info .details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card__price--info .details h2 {
+  font-size: 14px;
+}
+.card__price--info .details h3 {
+  color: var(--Desaturated-blue);
+  font-size: 14px;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.attribution a, .attribution a:visited, .attribution a:active {
+  color: var(--Bright-blue);
+}/*# sourceMappingURL=style.css.map */
